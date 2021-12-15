@@ -118,6 +118,12 @@ def order(request):
 
 def shop(request):
     return render(request, 'shop-left-sidebar.html')
+def productpage(request):
+    return render(request, 'single-product.html')
+def cart(request):
+    return render(request, 'cart.html')
+
+
 
 
 

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static%}
 <html class="no-js" lang="zxx">
 
 <head>
@@ -9,40 +10,40 @@
     <title>Shopping Cart :: Lukas - Car Parts Store eCommerce HTML Template</title>
 
     <!--== Favicon ==-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static '/img/favicon.ico" type="image/x-icon" />
 
     <!--== Google Fonts ==-->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CPoppins:400,400i,500,600&display=swap" rel="stylesheet">
 
-    <!-- build:css assets/css/app.min.css -->
+    <!-- build:css {% static '/css/app.min.css'%} -->
     <!--== Leaflet Min CSS ==-->
-    <link href="assets/css/leaflet.min.css" rel="stylesheet" />
+    <link href="{% static 'css/leaflet.min.css'%}" rel="stylesheet" />
     <!--== Nice Select Min CSS ==-->
-    <link href="assets/css/nice-select.min.css" rel="stylesheet" />
+    <link href="{% static 'css/nice-select.min.css'%}" rel="stylesheet" />
     <!--== Slick Slider Min CSS ==-->
-    <link href="assets/css/slick.min.css" rel="stylesheet" />
+    <link href="{% static 'css/slick.min.css'%}" rel="stylesheet" />
     <!--== Magnific Popup Min CSS ==-->
-    <link href="assets/css/magnific-popup.min.css" rel="stylesheet" />
+    <link href="{% static 'css/magnific-popup.min.css'%}" rel="stylesheet" />
     <!--== Slicknav Min CSS ==-->
-    <link href="assets/css/slicknav.min.css" rel="stylesheet" />
+    <link href="{% static 'css/slicknav.min.css'%}" rel="stylesheet" />
     <!--== Animate Min CSS ==-->
-    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="{% static 'css/animate.min.css'%}" rel="stylesheet" />
     <!--== Ionicons Min CSS ==-->
-    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="{% static 'css/ionicons.min.css'%}" rel="stylesheet" />
     <!--== Font-Awesome Min CSS ==-->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet" />
     <!--== Bootstrap Min CSS ==-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet" />
 
     <!--== Main Style CSS ==-->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" />
     <!--== Helper Min CSS ==-->
-    <link href="assets/css/helper.min.css" rel="stylesheet" />
+    <link href="{% static 'css/helper.min.css'%}" rel="stylesheet" />
     <!-- endbuild -->
 
     <!--[if lt IE 9]>
-<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'%}"></script>
+<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js'%}"></script>
 <![endif]-->
 </head>
 
@@ -54,7 +55,7 @@
             <div class="row align-items-center">
                 <div class="col-sm-4 col-lg-2">
                     <div class="site-logo text-center text-sm-left">
-                        <a href="index.html"><img src="assets/img/logo.png" alt="Logo" /></a>
+                        <a href="index.html"><img src="{% static '/img/logo.png" alt="Logo" /></a>
                     </div>
                 </div>
 
@@ -114,7 +115,7 @@
                                 <div class="mini-cart-product">
                                     <div class="mini-product">
                                         <div class="mini-product__thumb">
-                                            <a href="single-product.html"><img src="assets/img/product/product-1.png" alt="product" /></a>
+                                            <a href="single-product.html"><img src="{% static '/img/product/product-1.png" alt="product" /></a>
                                         </div>
                                         <div class="mini-product__info">
                                             <h2 class="title"><a href="single-product.html">Auto Clutch & Brake</a></h2>
@@ -128,7 +129,7 @@
 
                                     <div class="mini-product">
                                         <div class="mini-product__thumb">
-                                            <a href="single-product.html"><img src="assets/img/product/product-2.png" alt="product" /></a>
+                                            <a href="single-product.html"><img src="{% static '/img/product/product-2.png" alt="product" /></a>
                                         </div>
                                         <div class="mini-product__info">
                                             <h2 class="title"><a href="single-product.html">Leather Steering Wheel</a></h2>
@@ -142,7 +143,7 @@
 
                                     <div class="mini-product">
                                         <div class="mini-product__thumb">
-                                            <a href="single-product.html"><img src="assets/img/product/product-3.png" alt="product" /></a>
+                                            <a href="single-product.html"><img src="{% static '/img/product/product-3.png" alt="product" /></a>
                                         </div>
                                         <div class="mini-product__info">
                                             <h2 class="title"><a href="single-product.html">Leather Steering Wheel</a></h2>
@@ -170,7 +171,7 @@
     <!--== End Header Area ==-->
 
     <!--== Start Page Header Area ==-->
-    <div class="page-header-wrap bg-img" data-bg="assets/img/bg/page-header-bg.jpg">
+    <div class="page-header-wrap bg-img" data-bg="{% static '/img/bg/page-header-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -217,14 +218,14 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-1.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-1.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Metallic cotton
                                                         dress</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$29.99</span>
+                                                <span class="price">29.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -232,7 +233,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$29.99</span>
+                                                <span class="total">39.99</span>
                                             </td>
                                         </tr>
 
@@ -243,13 +244,13 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-2.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-2.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Open-knit sweater</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="price">39.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -257,7 +258,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="total">39.99</span>
                                             </td>
                                         </tr>
 
@@ -268,14 +269,14 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-3.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-3.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Metallic cotton
                                                         dress</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$29.99</span>
+                                                <span class="price">29.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -283,7 +284,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$29.99</span>
+                                                <span class="total">29.99</span>
                                             </td>
                                         </tr>
 
@@ -294,14 +295,14 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-4.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-4.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Open-knit
                                                         sweater</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="price">39.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -309,7 +310,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="total">39.99</span>
                                             </td>
                                         </tr>
 
@@ -320,14 +321,14 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-5.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-5.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Metallic cotton
                                                         dress</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$29.99</span>
+                                                <span class="price">29.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -335,7 +336,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$29.99</span>
+                                                <span class="total">29.99</span>
                                             </td>
                                         </tr>
 
@@ -346,14 +347,14 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-6.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-6.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Open-knit
                                                         sweater</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="price">39.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -361,7 +362,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="total">69.99</span>
                                             </td>
                                         </tr>
 
@@ -372,14 +373,14 @@
                                                         <button><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
-                                                        <img src="assets/img/product/product-7.png" alt="Product" />
+                                                        <img src="{% static '/img/product/product-7.png" alt="Product" />
                                                     </a>
                                                     <a href="single-product.html" class="product-name">Open-knit
                                                         sweater</a>
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="price">39.99</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -387,7 +388,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">$39.99</span>
+                                                <span class="total">39.99</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -418,41 +419,10 @@
 
                             <div class="cart-cal-table table-responsive">
                                 <table class="table table-borderless">
-                                    <tr class="cart-sub-total">
-                                        <th>Subtotal</th>
-                                        <td>$289.89</td>
-                                    </tr>
-                                    <tr class="shipping">
-                                        <th>Shipping</th>
-                                        <td>
-                                            <ul class="shipping-method">
-                                                <li>
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="flat_shipping" name="shipping_method" class="custom-control-input" checked />
-                                                        <label class="custom-control-label" for="flat_shipping">Flat Rate :
-                                                            $10</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="free_shipping" name="shipping_method" class="custom-control-input" />
-                                                        <label class="custom-control-label" for="free_shipping">Free
-                                                            Shipping</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="cod_shipping" name="shipping_method" class="custom-control-input" />
-                                                        <label class="custom-control-label" for="cod_shipping">Cash on
-                                                            Delivery</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </td>
-                                    </tr>
+
                                     <tr class="order-total">
                                         <th>Total</th>
-                                        <td><b>$299.93</b></td>
+                                        <td><b id="total">$299.93</b></td>
                                     </tr>
                                 </table>
                             </div>
@@ -476,7 +446,7 @@
                     <div class="col-lg-3">
                         <div class="widget-item">
                             <div class="about-widget">
-                                <a href="index.html"><img src="assets/img/logo-light.png" alt="Logo" /></a>
+                                <a href="index.html"><img src="{% static '/img/logo-light.png" alt="Logo" /></a>
                                 <p>Lukas is the best parts shop for your car
                                     accessories. What kind of parts do you
                                     need you can get here soluta nobis</p>
@@ -572,7 +542,7 @@
             <div class="off-canvas-content">
                 <div class="off-canvas-header">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+                        <a href="index.html"><img src="{% static '/img/logo.png" alt="Logo"></a>
                     </div>
                     <div class="close-btn">
                         <button class="btn-close"><i class="ion-android-close"></i></button>
@@ -590,32 +560,32 @@
 
 
     <!--=======================Javascript============================-->
-    <!-- build:js assets/js/app.min.js -->
+    <!-- build:js {% static '/js/app.min.js'%} -->
     <!--=== Modernizr Min Js ===-->
-    <script src="assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="{% static 'js/modernizr-3.6.0.min.js'%}"></script>
     <!--=== jQuery Min Js ===-->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
     <!--=== jQuery Migration Min Js ===-->
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{% static 'js/jquery-migrate-1.2.1.min.js'%}"></script>
     <!--=== Popper Min Js ===-->
-    <script src="assets/js/popper.min.js"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
     <!--=== Bootstrap Min Js ===-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
     <!--=== Slicknav Min Js ===-->
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
     <!--=== Magnific Popup Min Js ===-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
     <!--=== Slick Slider Min Js ===-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{% static 'js/slick.min.js'%}"></script>
     <!--=== Nice Select Min Js ===-->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
     <!--=== Leaflet Min Js ===-->
-    <script src="assets/js/leaflet.min.js"></script>
+    <script src="{% static 'js/leaflet.min.js'%}"></script>
     <!--=== Countdown Js ===-->
-    <script src="assets/js/countdown.js"></script>
-
+    <script src="{% static 'js/countdown.js'%}"></script>
+ <script src="{% static 'js/price.js'%}"></script>
     <!--=== Active Js ===-->
-    <script src="assets/js/active.js"></script>
+    <script src="{% static 'js/active.js'%}"></script>
     <!-- endbuild -->
 
 </body>

@@ -30,4 +30,6 @@ urlpatterns = [
     path('delete_product/<int:id>', views.delete_product, name='delete_product'),
     path('order',views.order, name='order' ),
     path('shop',views.shop,name='shop'),
+    path('productpage',views.productpage,name='productpage'),
+    path('cart',views.cart,name='cart'),
 ]
