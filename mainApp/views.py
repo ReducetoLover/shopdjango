@@ -10,7 +10,8 @@ from django.contrib import auth
 def index(request):
     # return render(request,'login.html')
     products=Product.objects.all()
-    return render(request,'product_list_extended.html',{'products':products})
+   # return render(request,'product_list_extended.html',{'products':products})
+    return render(request,'shop-left-sidebar.html',{'products':products})
 
 def register(request):
 
@@ -53,7 +54,7 @@ def show_cart(request):
     total=0
     for product in products:
         total+=product.Price
-    return render(request, 'shoping_cart_extended.html', {'products': products,'total':total})
+    return render(request, 'cart.html', {'products': products,'total':total})
 
 def add_to_cart(request, id):
     if request.user.is_authenticated:
@@ -116,12 +117,13 @@ def order(request):
 
 
 
-def shop(request):
-    return render(request, 'shop-left-sidebar.html')
+#def shop(request):
+   # return render(request, 'shop-left-sidebar.html')
+
+
 def productpage(request):
     return render(request, 'single-product.html')
-def cart(request):
-    return render(request, 'cart.html')
+
 
 
 

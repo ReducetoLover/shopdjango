@@ -14,6 +14,7 @@ class Product(models.Model):
     Description=models.TextField(max_length=1000, blank=True,null=True)
     Pics=models.ImageField(upload_to='static/img')
 
+
 class Cart(models.Model):
     ProdList=models.ManyToManyField(Product, blank=True)
     User=models.OneToOneField(Users, on_delete=models.CASCADE)
