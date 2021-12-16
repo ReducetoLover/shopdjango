@@ -111,7 +111,7 @@ def order(request):
         answer = redirect(url)
         print('redirect on payment')
         return answer
-    return render(request, 'chekout_extended.html',{'products': products,'total':total})
+    return render(request, 'checkoutcar.html',{'products': products,'total':total})
 
 
 
@@ -123,6 +123,8 @@ def order(request):
 
 def productpage(request):
     return render(request, 'single-product.html')
+def checkoutcar(request):
+    return render(request, 'checkoutcar.html')
 
 
 

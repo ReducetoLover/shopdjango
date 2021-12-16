@@ -67,7 +67,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="total">39.99</span>
+                                                <span class="total">{{product.Price}}</span>
                                             </td>
                                         </tr>
 {% endfor %}
@@ -109,7 +109,7 @@
                             </div>
 
                             <div class="proceed-checkout-btn">
-                                <a href="checkout.html" class="btn btn-brand d-block">Proceed to Checkout</a>
+                                <a href="{% url 'checkoutcar' %}" class="btn btn-brand d-block">Proceed to Checkout</a>
                             </div>
                         </div>
                     </div>
