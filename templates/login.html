@@ -1,7 +1,24 @@
 {% extends 'bazecar.html' %}
 {%load static%}
 {% block content %}
+ <div class="page-header-wrap bg-img" data-bg="{% static 'img/bg/page-header-bg.jpg'%}" >
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="page-header-content">
+                        <div class="page-header-content-inner">
+                            <h1>Login | Register</h1>
 
+                            <ul class="breadcrumb">
+                                <li><a href="/">Home</a></li>
+                                <li class="current"><a href="{% static '#">Login | Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
@@ -9,12 +26,17 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#account-login" aria-controls="account-login" role="tab" data-toggle="tab">Account Login</a>
+                                    <button style="color:white" class="btn btn-success " href="#account-login" aria-controls="account-login" role="tab" data-toggle="tab">
+                                        <p>Account Login</p>
+                                    </button>
+
                                 </li>
 
 
                                 <li role="presentation">
-                                    <a href="#account-register" aria-controls="account-register" role="tab" data-toggle="tab">Register</a>
+                                    <button class="btn btn-success" href="#account-register" aria-controls="account-register" role="tab" data-toggle="tab">
+                                    <p >Register</p>
+                                        </button>
                                 </li>
                             </ul><!-- /.nav -->
 

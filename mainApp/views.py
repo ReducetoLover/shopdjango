@@ -56,6 +56,7 @@ def show_cart(request):
         total+=product.Price
     return render(request, 'cart.html', {'products': products,'total':total})
 
+
 def add_to_cart(request, id):
     if request.user.is_authenticated:
         print('entered if')
@@ -87,7 +88,7 @@ def delete_product(request, id):
         currCart=Cart.objects.get(User=user)
         currCart.ProdList.remove(product)
         currCart.save()
-        return redirect('show_cart')
+        return redirect('cart')
     else:
 
         return redirect('login')
@@ -105,7 +106,7 @@ def order(request):
     for product in products:
         total += product.Price
     if request.method=='POST':
-        qiwi_phone = '+79130731008'
+        qiwi_phone = '+79131233048'
         url = 'https://qiwi.com/payment/form/99?extra%5B%27account%27%5D=' + qiwi_phone + '&amountInteger=' + str(
             total) + '&amountFraction=' + str(0) + '&currency=643&blocked[0]=account'
         answer = redirect(url)

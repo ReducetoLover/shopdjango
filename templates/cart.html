@@ -12,8 +12,8 @@
                             <h1>Shopping Cart</h1>
 
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/">Shop</a></li>
                                 <li class="current"><a href="#">Cart</a></li>
                             </ul>
                         </div>
@@ -59,7 +59,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="price">{{product.Price}}</span>
+                                                <span class="price">${{product.Price}}</span>
                                             </td>
                                             <td>
                                                 <div class="pro-qty">
@@ -67,7 +67,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="total">{{product.Price}}</span>
+                                                <span class="total">${{product.Price}}</span>
                                             </td>
                                         </tr>
 {% endfor %}
@@ -103,7 +103,7 @@
 
                                     <tr class="order-total">
                                         <th>Total</th>
-                                        <td><b id="total">$299.93</b></td>
+                                        <td><b id="total">$1300</b></td>
                                     </tr>
                                 </table>
                             </div>

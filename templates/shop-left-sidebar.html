@@ -12,7 +12,7 @@
                             <h1>Shop Left Sidebar</h1>
 
                             <ul class="breadcrumb">
-                                <li><a href="{% static 'css/Lukas/lukas/index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li class="current"><a href="{% static '#">Shop</a></li>
                             </ul>
                         </div>
@@ -160,7 +160,7 @@
                                 <div class="product-item">
 
                                     <div class="product-item__thumb">
-                                        <a href="{% url 'productpage' %}">
+                                        <a href="/">
                                             <img class="thumb-primary" src="{% if product.Pics %}{{ product.Pics.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Product" />
                                             <img class="thumb-secondary" src="{% if product.Pics %}{{ product.Pics.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Product" />
                                         </a>
@@ -176,8 +176,8 @@
 
                                     <div class="product-item__content">
                                         <div class="product-item__info">
-                                            <h4 class="title"><a href="{% static '/single-product.html">{{product.Naming}}</a></h4>
-                                            <span class="price"><strong>Price:</strong> {{product.Price}}</span>
+                                            <h4 class="title"><a href="/">{{product.Naming}}</a></h4>
+                                            <span class="price"><strong>Price:</strong> ${{product.Price}}</span>
                                         </div>
 
                                         <div class="product-item__action">

@@ -14,8 +14,8 @@
                             <h1>Checkout</h1>
 
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/">Shop</a></li>
                                 <li class="current"><a href="#">Checkout</a></li>
                             </ul>
                         </div>
@@ -265,17 +265,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    {% for product in products %}
                                         <tr class="cart-item">
-                                            <td><span class="product-title">Ruffled cotton top</span> <span
+                                            <td><span class="product-title">{{product.Naming}}</span> <span
                                             class="product-quantity">&#215;  1</span></td>
-                                            <td>$39.99</td>
+                                            <td>${{product.Price}}</td>
                                         </tr>
-
+{% endfor %}
                                     </tbody>
                                     <tfoot>
                                         <tr class="cart-subtotal">
                                             <th>Subtotal</th>
-                                            <td>$309.00</td>
+                                            <td>$1300.00</td>
                                         </tr>
                                         <tr class="shipping">
                                             <th>Shipping</th>
@@ -307,7 +308,7 @@
                                         </tr>
                                         <tr class="final-total">
                                             <th>Total</th>
-                                            <td><span class="total-amount">$289.93</span></td>
+                                            <td><span class="total-amount">$1290</span></td>
                                         </tr>
                                     </tfoot>
                                 </table>
