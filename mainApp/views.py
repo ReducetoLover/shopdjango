@@ -123,8 +123,8 @@ def order(request):
 
 def productpage(request):
     return render(request, 'single-product.html')
-def checkoutcar(request):
-    return render(request, 'checkoutcar.html')
+#def checkoutcar(request):
+   # return render(request, 'checkoutcar.html')
 
 
 

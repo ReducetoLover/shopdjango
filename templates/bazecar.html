@@ -100,20 +100,22 @@
                     </div>
                 </div>
 
+
                 <div class="col-sm-8 col-lg-3">
                     <div class="site-action d-flex justify-content-center justify-content-sm-end align-items-center">
                         <ul class="login-reg-nav nav">
-                            <li><a href="{% static '#">Login</a></li>
-                            <li><a href="{% static '#">Register</a></li>
-                        </ul>
+                            <li><a href="{% url 'login'%}">Login | Register</a></li>
 
+                        </ul>
+ {% if user.is_authenticated %}
                         <div class="mini-cart-wrap">
                             <a href="{% url 'cart' %}" class="btn-mini-cart">
                                 <i class="ion-bag"></i>
 
                             </a>
 
-
+        <a href="{% url 'logout' %}">Выйти</a>
+                                    {% endif %}
                         </div>
 
                         <div class="responsive-menu d-lg-none">

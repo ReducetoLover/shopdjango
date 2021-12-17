@@ -33,6 +33,6 @@ urlpatterns = [
     #path('shop',views.shop,name='shop'),
     path('productpage',views.productpage,name='productpage'),
     path('cart',views.show_cart,name='cart'),
-    path('checkoutcar', views.checkoutcar, name='checkoutcar'),
+    path('checkoutcar', views.order, name='checkoutcar'),
 
 ]

@@ -48,9 +48,9 @@
                                             <td class="product-list">
                                                 <div class="cart-product-item d-flex align-items-center">
                                                     <div class="remove-icon">
-                                                        <button><i  class="fa fa-trash-o">
-                                                            <a href="{% url 'delete_product' product.id %}"></a>
-                                                        </i></button>
+                                                        <button>
+                                                            <a href="{% url 'delete_product' product.id %}"><i  class="fa fa-trash-o"> </i></a>
+                                                       </button>
                                                     </div>
                                                     <a href="single-product.html" class="product-thumb">
                                                         <img src="{% if product.Pics %}{{ product.Pics.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Product" />
