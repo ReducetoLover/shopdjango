@@ -11,8 +11,10 @@ class ProdPict(models.Model):
 class Product(models.Model):
     Naming=models.CharField(max_length=200, blank=True,null=True)
     Price=models.IntegerField( blank=True,null=True)
+    Pics=models.ImageField(upload_to='static/img',null=True)
     Description=models.TextField(max_length=1000, blank=True,null=True)
-    Pics=models.ImageField(upload_to='static/img')
+    Stars=models.FloatField(blank=True, default=0)
+    CountStars=models.IntegerField(blank=True, default=0)
 
 
 class Cart(models.Model):

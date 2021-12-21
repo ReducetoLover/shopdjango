@@ -35,6 +35,8 @@ urlpatterns = [
     path('cart',views.show_cart,name='cart'),
     path('checkoutcar', views.order, name='checkoutcar'),
     path('checkoutcar', views.show_cart, name='checkoutcar'),
+    path('add_star/<int:id>/<int:count>', views.add_star, name='add_star'),
+
 
 
 ]

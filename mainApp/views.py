@@ -74,7 +74,17 @@ def add_to_cart(request, id):
     else:
         return redirect('login')
 
-
+def add_star(request, id, count):
+    if request.user.is_authenticated:
+        print('entered if')
+        user = request.user
+        product = Product.objects.get(id = id)
+        product.CountStars += 1
+        product.Stars = (product.Stars+count)/product.CountStars
+        product.save()
+        return redirect('index')
+    else:
+        return redirect('login')
 
 def delete_product(request, id):
     if request.user is not None:
