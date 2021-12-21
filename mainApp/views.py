@@ -11,7 +11,7 @@ def index(request):
     # return render(request,'login.html')
     products=Product.objects.all()
    # return render(request,'product_list_extended.html',{'products':products})
-    return render(request,'shop-left-sidebar.html',{'products':products})
+    return render(request,'shop-left-sidebar.html',{'products':products, 'stars':[0,0,0,0,0]})
 
 def register(request):
 
@@ -79,8 +79,9 @@ def add_star(request, id, count):
         print('entered if')
         user = request.user
         product = Product.objects.get(id = id)
+        oldCount = product.CountStars
         product.CountStars += 1
-        product.Stars = (product.Stars+count)/product.CountStars
+        product.Stars = round(((product.Stars*oldCount)+count)/product.CountStars, 2)
         product.save()
         return redirect('index')
     else:

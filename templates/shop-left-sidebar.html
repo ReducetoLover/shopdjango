@@ -164,15 +164,20 @@
                                             <img class="thumb-primary" src="{% if product.Pics %}{{ product.Pics.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Product" />
                                             <img class="thumb-secondary" src="{% if product.Pics %}{{ product.Pics.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="Product" />
                                         </a>
-                                           {% if product.Stars == 0 %}
                                         <div class="ratting">
-                                            <span><a href="123"><i class="ion-android-star"></i></a></span>
-                                            <span><i class="ion-android-star"></i></span>
-                                            <span><i class="ion-android-star-outline"></i></span>
-                                            <span><i class="ion-android-star"></i></span>
-                                            <span><i class="ion-android-star-half"></i></span>
+                                            {% for i in stars %}
+                                            <span>
+                                                <a href="{% url 'add_star' product.id forloop.counter %} ">
+                                                    <i class="{% if product.Stars >= forloop.counter %}ion-android-star{% if product.Stars >= forloop.counter|add:0.5 and product.Stars <= forloop.counter|add:1 %}-half
+                                                                {% endif %}
+                                                              {% else %}
+                                                                ion-android-star-outline
+                                                              {% endif %}"></i>
+                                                </a>
+                                            </span>
+                                            {% endfor %}
+                                            {{product.Stars}}
                                         </div>
-                                        {%endif%}
                                     </div>
                                     <div class="product-item__content">
                                         <div class="product-item__info">

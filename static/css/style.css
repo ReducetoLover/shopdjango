@@ -103,6 +103,7 @@ a {
     transition: 0.4s;
     outline: none;
     text-decoration: none;
+    color: inherit;
 }
 
 a:hover,
